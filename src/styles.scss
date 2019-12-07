@@ -17,13 +17,11 @@ h1 {
 
   @media screen and (min-width: 450px) {
     font-size: 28px;
-    // padding-top: 15px;
   }
 }
 
 html, body {
   font-family: 'Raleway', sans-serif;
-  // height: 100%;
 }
 
 ul {
@@ -40,10 +38,6 @@ p, span {
   font-size: 14px;
 }
 
-.border-icon {
-    margin: 10px;
-    white-space: normal;
-}
 
 .content-container {
   background-color: #fff;
@@ -53,30 +47,6 @@ p, span {
   @media screen and (min-width: 450px) {
     padding-top: 15px;
   }
-}
-
-.icon-border {
-  white-space: nowrap;
-  overflow: hidden;
-  height: 15px;
-  margin-top: 30px;
-  width: 100%;
-}
-
-.icon-bullet {
-  margin-right: 10px;
-}
-
-.icon-blue {
-  color: #597AFF;
-}
-
-.icon-red {
-  color: #FF5959;
-}
-
-.icon-yellow {
-  color: #FFDE59;
 }
 
 .main-container {
