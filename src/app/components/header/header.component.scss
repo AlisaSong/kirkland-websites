@@ -1,0 +1,21 @@
+header {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.header-links {
+    font-family: 'Solway';
+    width: 80%;
+    text-align: center;
+    li {
+        display: inline-block;
+        width: 25%;
+    }
+}
