@@ -11,13 +11,14 @@ a {
 }
 
 h1 {
-  font-size: 26px;
-  font-weight: normal;
-  font-family: 'Mali', cursive;
+  font-size: 60px;
+  font-weight: bold;
+  //font-family: 'Mali', cursive;
+  font-family: 'Amatic SC', cursive;
 
-  @media screen and (min-width: 450px) {
-    font-size: 28px;
-  }
+  // @media screen and (min-width: 450px) {
+  //   font-size: 28px;
+  // }
 }
 
 html, body {
