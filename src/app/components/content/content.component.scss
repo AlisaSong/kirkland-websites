@@ -1,5 +1,5 @@
 h1 {
-    color: white;
+    //color: white;
     text-align: center;
 }
 
@@ -7,10 +7,54 @@ h1 {
     background-color: #6E8965;
     margin: 0 auto;
     width: 97%;
+    //background-color: #636B59
 }
 
 .intro-text {
+    color: #fff;
     margin: auto;
     padding: 10px 0;
     width: 97%;
+    height: 450px;
+
+    h1 {
+        color: #fff;
+    }
 }
+
+.process-content {
+    background-color: #ebefea;
+    display: flex;
+}
+
+.process-text {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.process-text-container {
+    width: 60%;
+}
+
+.process-title {
+}
+
+.process-title-container {
+    width: 40%;
+}
+
+.work-content {
+    background-color:  #ebefea;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 50%;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  

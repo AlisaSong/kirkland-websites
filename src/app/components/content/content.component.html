@@ -3,9 +3,70 @@
         <section class="intro-text">
             <h1>Your business needs a website...<br> but you already knew that!</h1>
             <p>
-                We can help. So let us help you: From start to finish, copywriting, design, content layout, photography and the coding that goes into it.
+                We specialize in working with small businesses. From start to finish, copywriting, design, content
+                layout, photography and the coding that goes into it.
             </p>
         </section>
-        
     </section>
+    <section class="process-content">
+        <div class="process-title-container">
+            <h1 class="process-title">OUR PROCESS</h1>
+        </div>
+        <div class="process-text-container">
+            <article class="process-text">
+                <h3>Consultation</h3>
+                <p>
+                    Cras quis mollis risus. Aenean cursus turpis a ornare volutpat. In eu nibh dignissim, efficitur
+                    sapien
+                    a, tempor nisl.
+                    Mauris et malesuada leo. Morbi id purus et sem porttitor scelerisque a et dui. Fusce non ullamcorper
+                    nunc. Quisque non
+                    velit justo.
+                </p>
+                <h3>Recommendations</h3>
+                <p>
+                    Etiam id magna aliquet, egestas turpis sed, sodales nisi. Nam euismod purus enim, nec
+                    fringilla est consectetur
+                    eu. Nullam quis faucibus mi. Aenean sed ex euismod, sodales tellus id, aliquam ante. Praesent quis
+                    ante
+                    magna.
+                </p>
+                <h3>Timeline</h3>
+                <span>
+                    Curabitur venenatis ac odio quis interdum. Curabitur sit amet erat et lorem pulvinar dignissim vel
+                    auctor nisl. In
+                    rhoncus aliquet eros eu iaculis. Curabitur imperdiet risus ac diam vulputate, eu elementum ipsum
+                    dignissim.
+                </span>
+                <h3>Final Delivery</h3>
+                <span>
+                    Curabitur venenatis ac odio quis interdum. Curabitur sit amet erat et lorem pulvinar dignissim vel
+                    auctor nisl. In
+                    rhoncus aliquet eros eu iaculis. Curabitur imperdiet risus ac diam vulputate, eu elementum ipsum
+                    dignissim.
+                </span>
+            </article>
+        </div>
+    </section>
+
+    <section class="work-content">
+        <h1>Work with us</h1>
+        <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="Input">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-select placeholder="Select">
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+        </div>
+    </section>
+
 </div>
