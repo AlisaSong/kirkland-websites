@@ -8,6 +8,10 @@ header {
     text-align: center;
 }
 
+fa-icon {
+  vertical-align: 0;
+}
+
 ul {
   padding-left: 0;
 }
@@ -22,13 +26,12 @@ ul {
   }
 }
 
-svg {
-    width: 40%;
+.moon-icon {
+  font-size: 32px;
+  padding-bottom: 10px;
 }
 
-.moon-icon {
-    padding-left: 10px;
-    margin-bottom: 8px;
-    max-height: 50px;
-    max-width: 50px;
+.title {
+  font-family: 'Courier Prime', sans-serif;
+  margin-bottom: 0;
 }
