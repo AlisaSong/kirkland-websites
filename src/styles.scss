@@ -2,7 +2,7 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
 * {
-  //font-family: Helvetica;
+  //font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -11,14 +11,11 @@ a {
 }
 
 h1 {
+  color: black;
   font-size: 60px;
-  font-weight: bold;
-  //font-family: 'Mali', cursive;
-  font-family: 'Amatic SC', cursive;
-
-  // @media screen and (min-width: 450px) {
-  //   font-size: 28px;
-  // }
+  font-weight: normal;
+  font-family: 'Abel', sans-serif;
+  margin: 0;
 }
 
 html, body {
@@ -35,8 +32,10 @@ li {
 }
 
 p, span {
+  font-family: 'Lato', sans-serif;
   font-weight: normal;
   font-size: 14px;
+  margin: 0;
 }
 
 
@@ -74,3 +73,6 @@ p, span {
 .strong-text {
   font-weight: bold;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
