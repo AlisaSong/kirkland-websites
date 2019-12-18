@@ -1,60 +1,145 @@
 h1 {
-    //color: white;
-    text-align: center;
+  //color: white;
+  text-align: center;
+}
+
+li {
+  white-space: pre;
 }
 
 .intro-content {
-    background-color: #6E8965;
-    margin: 0 auto;
-    width: 97%;
-    //background-color: #636B59
+  background-color: #6e8965;
+  margin: 0 auto;
+  width: 97%;
 }
 
 .intro-text {
-    color: #fff;
-    margin: auto;
-    padding: 10px 0;
-    width: 97%;
-    height: 450px;
+  color: #fff;
+  margin: auto;
+  padding: 10px 0;
+  width: 80%;
+  height: 900px;
 
-    h1 {
-        color: #fff;
-    }
+  h1 {
+    color: #fff;
+  }
+
+  @media screen and (min-width: 550px) {
+    height: 800px;
+  }
+
+  @media screen and (min-width: 750px) {
+    height: 760px;
+  }
+
+  @media screen and (min-width: 790px) {
+    height: 690px;
+  }
+
+  @media screen and (min-width: 950px) {
+    height: 550px;
+  }
+
+  @media screen and (min-width: 975px) {
+    height: 500px;
+  }
 }
 
 .process-content {
-    background-color: #ebefea;
-    display: flex;
+  background-color: #ebefea;
+  display: flex;
+}
+
+.process-icon {
+  font-size: 66px;
+  font-stretch: extra-condensed;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .process-text {
-    margin: 0 auto;
-    width: 80%;
+  margin: 0 auto 5% auto;
+  width: 80%;
 }
 
 .process-text-container {
-    width: 60%;
-}
-
-.process-title {
+  width: 60%;
 }
 
 .process-title-container {
-    width: 40%;
+  text-align: center;
+  width: 40%;
 }
 
 .work-content {
-    background-color:  #ebefea;
+  background-color: #ebefea;
 }
 
 .example-container {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  background-color: #d3a4a6;
+}
+
+.example-container > * {
+  margin: 10px auto;
+  min-width: 150px;
+  width: 70%;
+}
+
+.work-details {
+  text-align: center;
+  @media screen and (min-width: 950px) {
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 50%;
+    justify-content: center;
+    flex-direction: row;
   }
-  
-  .example-container > * {
+}
+
+.work-title {
+    margin: 0;
+}
+
+.website-work {
+  @media screen and (min-width: 950px) {
+    margin-left: 100px;
+  }
+}
+
+.input-areas {
+  color: #f2e4e4;
+  font-size: 18px;
+  justify-content: right;
+  mat-checkbox.mat-checkbox {
+    margin-right: 15px;
+  }
+
+  mat-form-field.mat-form-field {
+    margin-left: 15px;
     width: 100%;
+
+    @media screen and (min-width: 1390px) {
+      width: 47%;
+    }
   }
-  
+}
+
+.input-same-line {
+  mat-form-field.mat-form-field {
+    width: 100%;
+    margin-right: 5%;
+    @media screen and (min-width: 1080px) {
+      width: 45%;
+    }
+  }
+}
+
+mat-form-field {
+  font-family: "Lato", sans-serif;
+}
+
+textarea {
+  height: 80px;
+}

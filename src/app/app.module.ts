@@ -1,8 +1,10 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule, MatSelectModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,10 +22,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContentComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    FontAwesomeModule,
+    FormsModule,
+    HttpClientModule,
+    MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,

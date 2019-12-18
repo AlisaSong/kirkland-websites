@@ -2,71 +2,150 @@
     <section class="intro-content">
         <section class="intro-text">
             <h1>Your business needs a website...<br> but you already knew that!</h1>
-            <p>
-                We specialize in working with small businesses. From start to finish, copywriting, design, content
-                layout, photography and the coding that goes into it.
+            <p class="about-text">
+                We specialize in working with small businesses, and are passionate about delivering stunning, affordable
+                websites and visuals that you'll be excited to share with your clientele.
+                Let us take your stress away from this process, so you can focus on what you already do best with your
+                business.
             </p>
+            <br>
+            <p class="about-text">
+                Our services span across photography, videography and website development.
+            </p>
+            <section class="work-details">
+
+                <section class="visual-work">
+                    <h2>Visual Work</h2>
+                    <ul>
+                        <li>
+                            <fa-icon [icon]="faAngleRight"></fa-icon> website design: layout and site architecture
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faAngleRight"></fa-icon> photography: headshots, product photos, and more
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faAngleRight"></fa-icon> videography: on site video work
+                        </li>
+                    </ul>
+                </section>
+                <section class="website-work">
+                    <h2>Website Work</h2>
+                    <ul>
+                        <li>
+                            <fa-icon [icon]="faAngleRight"></fa-icon> web development: mobile and desktop friendly sites
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faAngleRight"></fa-icon> domain name help and web hosting configuration
+                        </li>
+                        <li>
+                            <fa-icon [icon]="faAngleRight"></fa-icon> content writing to make your site read beautifully
+                        </li>
+                    </ul>
+                </section>
+            </section>
         </section>
     </section>
+
     <section class="process-content">
         <div class="process-title-container">
             <h1 class="process-title">OUR PROCESS</h1>
+            <br>
+            <p class="process-icon">>></p>
         </div>
         <div class="process-text-container">
             <article class="process-text">
                 <h3>Consultation</h3>
                 <p>
-                    Cras quis mollis risus. Aenean cursus turpis a ornare volutpat. In eu nibh dignissim, efficitur
-                    sapien
-                    a, tempor nisl.
-                    Mauris et malesuada leo. Morbi id purus et sem porttitor scelerisque a et dui. Fusce non ullamcorper
-                    nunc. Quisque non
-                    velit justo.
+                    Upon receiving your inquiry, we will reach out to you within 48 hours to set up a 30-minute
+                    consultation.
+                    Together, we will figure out a tailored recommendation of work that fits your business needs.
                 </p>
-                <h3>Recommendations</h3>
+                <h3>Timeline and Agreement</h3>
                 <p>
-                    Etiam id magna aliquet, egestas turpis sed, sodales nisi. Nam euismod purus enim, nec
-                    fringilla est consectetur
-                    eu. Nullam quis faucibus mi. Aenean sed ex euismod, sodales tellus id, aliquam ante. Praesent quis
-                    ante
-                    magna.
+                    Once we decide on the work ahead, we will set up a quick timeline of deliverables and get started!
+                    Typically we can build a small business website over a 1-2 month period, but this timing may vary
+                    depending on your situation.
+                    For photography-heavy projects, we will set up specific times for photoshoots that work best with
+                    your schedule.
                 </p>
-                <h3>Timeline</h3>
+                <h3>Collaboration</h3>
                 <span>
-                    Curabitur venenatis ac odio quis interdum. Curabitur sit amet erat et lorem pulvinar dignissim vel
-                    auctor nisl. In
-                    rhoncus aliquet eros eu iaculis. Curabitur imperdiet risus ac diam vulputate, eu elementum ipsum
-                    dignissim.
+                    Once our collaboration starts, we will check in with you to review our work over the course of the
+                    project.
+                    You'll have the opportunity to provide feedback as we build out your site and/or edit your visuals.
                 </span>
                 <h3>Final Delivery</h3>
                 <span>
-                    Curabitur venenatis ac odio quis interdum. Curabitur sit amet erat et lorem pulvinar dignissim vel
-                    auctor nisl. In
-                    rhoncus aliquet eros eu iaculis. Curabitur imperdiet risus ac diam vulputate, eu elementum ipsum
-                    dignissim.
+                    We'll deliver the website you've been waiting for, making sure that web hosting, domain name
+                    service, and the site itself is up and ready to go.
                 </span>
             </article>
         </div>
     </section>
 
     <section class="work-content">
-        <h1>Work with us</h1>
+        <h1 class="work-title">Work with us</h1>
         <div class="example-container">
-            <mat-form-field>
-              <input matInput placeholder="Input">
-            </mat-form-field>
+            <form class="example-container" [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()"
+                *ngIf="!isFormSubmitted">
+                <div class="input-same-line">
+                    <mat-form-field>
+                        <input matInput  placeholder="First & Last Name" formControlName="name">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Business Name" formControlName="business">
+                        <mat-error *ngIf="contactForm.get('business').errors && contactForm.get('business').errors.required">
+                            Please enter your business name.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
 
-            <mat-form-field>
-              <mat-select placeholder="Select">
-                <mat-option value="option">Option</mat-option>
-              </mat-select>
-            </mat-form-field>
+                <div class="input-same-line">
+                    <mat-form-field>
+                        <input matInput placeholder="Enter your email" formControlName="email">
+                        <mat-error
+                            *ngIf="contactForm.get('email').errors && contactForm.get('email').errors.required">
+                            Please enter your email.
+                        </mat-error>
+                        <mat-error
+                            *ngIf="contactForm.get('email').errors && contactForm.get('email').errors.email">
+                            Not a valid email.
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput formControlName="phone" placeholder="phone number" formControlName="phone">
+                        <mat-error
+                            *ngIf="contactForm.get('phone').errors && contactForm.get('phone').errors.phone">
+                            Please enter your phone number.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="input-areas">
+                    <p>What areas do you need help?</p>
+                    <mat-checkbox formControlName="needsWebsite">Website</mat-checkbox>
+                    <mat-checkbox formControlName="needsPhoto">Photography</mat-checkbox>
+                    <mat-checkbox formControlName="needsVideo">Videography</mat-checkbox>
 
-          <mat-form-field>
-            <input matInput placeholder="Enter your email" [formControl]="email" required>
-            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-          </mat-form-field>
+                    <mat-form-field>
+                        <mat-select [(value)]="budget" placeholder="Your Budget" formControlName="budget">
+                            <mat-option value="<$1200">
+                                <$1200</mat-option> <mat-option value="$1200-$2500">$1200-$2500
+                            </mat-option>
+                            <mat-option value="$2500-$4000">$2500-$4000</mat-option>
+                            <mat-option value="$4000+">$4000+</mat-option>
+                            <mat-option value="unsure">Not Sure</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="contactForm.get('budget').errors && contactForm.get('budget').errors.budget">
+                            Please select a budget.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <mat-form-field>
+                    <textarea matInput formControlName="message" placeholder="Include more details here!"></textarea>
+                </mat-form-field>
+                <button (click)="getName()">SUBMIT</button>
+            </form>
         </div>
     </section>
-
 </div>
