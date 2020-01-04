@@ -63,9 +63,9 @@ export class ContentComponent implements OnInit {
       message: new FormControl(''),
       name: new FormControl('', [Validators.required]),
       phone: new FormControl(''),
-      needsWebsite: new FormControl('', [Validators.required]),
-      needsPhoto: new FormControl('', [Validators.required]),
-      needsVideo: new FormControl('', [Validators.required]),
+      needsWebsite: new FormControl(''),
+      needsPhoto: new FormControl(''),
+      needsVideo: new FormControl(''),
     });
   }
 
@@ -83,8 +83,13 @@ export class ContentComponent implements OnInit {
       const endpoint = `${SETTINGS.AZURE_FUNCTION_URL}?
 ${SETTINGS.FORM_CODE}=${SETTINGS.CODE}
 &${SETTINGS.FORM_NAME}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_NAME).value)}
+&${SETTINGS.FORM_PHONE}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_PHONE).value)}
 &${SETTINGS.FORM_EMAIL}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_EMAIL).value)}
 &${SETTINGS.FORM_BUSINESS}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_BUSINESS).value)}
+&${SETTINGS.FORM_BUDGET}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_BUDGET).value)}
+&${SETTINGS.FORM_NEEDSWEBSITE}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_NEEDSWEBSITE).value)}
+&${SETTINGS.FORM_NEEDSPHOTO}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_NEEDSPHOTO).value)}
+&${SETTINGS.FORM_NEEDSVIDEO}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_NEEDSVIDEO).value)}
 &${SETTINGS.FORM_MESSAGE}=${encodeURIComponent(this.contactForm.get(SETTINGS.FORM_MESSAGE).value)}`;
 
       try {
