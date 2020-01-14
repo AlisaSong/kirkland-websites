@@ -45,6 +45,28 @@ li {
   }
 }
 
+.portfolio-content {
+  background-color: white;
+}
+
+.portfolio-pieces {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.portfolio-piece {
+  width: 30%;
+
+  img {
+    max-width: 450px;
+  }
+}
+
+.portfolio-title-container {
+  text-align: center;
+}
+
 .process-content {
   background-color: #ebefea;
   display: flex;
@@ -79,7 +101,7 @@ li {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80%;
+  width: 97%;
   background-color: #d3a4a6;
 }
 

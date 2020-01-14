@@ -1,5 +1,5 @@
 <div class="content-container">
-    <section class="intro-content">
+    <section class="intro-content" id="about">
         <section class="intro-text">
             <h1>Your business needs a website...<br> but you already knew that!</h1>
             <p class="about-text">
@@ -46,7 +46,7 @@
         </section>
     </section>
 
-    <section class="process-content">
+    <section class="process-content" id="process">
         <div class="process-title-container">
             <h1 class="process-title">OUR PROCESS</h1>
             <br>
@@ -83,7 +83,21 @@
         </div>
     </section>
 
-    <section class="work-content">
+    <section class="portfolio-content" id="portfolio">
+        <div class="portfolio-title-container">
+            <h2>Portfolio</h2>
+        </div>
+        <div class="portfolio-pieces">
+            <div class="portfolio-piece">
+                <a [routerLink]="['/portfolio', 'montessori']"><img src="assets/montessori1.jpg"></a>
+            </div>
+            <div class="portfolio-piece">
+                <img src="assets/montessori1.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="work-content" id="contact">
         <h1 class="work-title">Work with us</h1>
         <div class="example-container">
             <form class="example-container" [formGroup]="contactForm" (ngSubmit)="onSubmitContactForm()"
