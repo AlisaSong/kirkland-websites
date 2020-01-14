@@ -13,13 +13,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContentComponent } from './components/content/content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    PortfolioComponent
   ],
   imports: [
     AppRoutingModule,
